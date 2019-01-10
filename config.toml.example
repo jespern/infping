@@ -1,14 +1,22 @@
 [influxdb]
 
-url = "http://10.20.30.40:8086"
-db = "ping"
+url = "http://localhost:8086"
+db = "telegraf"
 measurement = "ping"
-user = "ping"
-pass = "pong"
+user = "not"
+pass = "used"
 
 [hosts]
-
 hosts = [
-    "127.0.0.1",
+    # CloudFlare
+    "1.1.1.1",
+    "1.0.0.1",
+
+    # Google
+    "8.8.4.4",
     "8.8.8.8",
+
+    # DNS.watch
+    "84.200.69.80",
+    "84.200.70.40"
 ]
